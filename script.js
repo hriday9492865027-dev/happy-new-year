@@ -313,6 +313,16 @@ document.getElementById('btnWish').addEventListener('click', () => {
     showWish();
 });
 
+document.getElementById('btnSurprise').addEventListener('click', () => {
+    startConfetti();
+    SoundManager.playFanfare(); // PLAY FANFARE SOUND
+    // Flash effect
+    document.body.style.backgroundColor = 'white';
+    setTimeout(() => {
+        document.body.style.backgroundColor = 'var(--bg-dark)';
+    }, 100);
+});
+
 // --------------------------------------------------------
 // Custom Wish Feature
 // --------------------------------------------------------
